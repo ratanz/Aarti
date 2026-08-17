@@ -25,8 +25,15 @@ const notoDevanagari = Noto_Serif_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "Aarti — Sacred Verses, Chalisas & Ashtakams",
-  description: "A minimalist, dark sanctuary for sacred chants, chalisas, and ashtakams with pristine typography and meditative clarity.",
+  title: "Shri Kaal Bhairav Ji",
+  description: "A sacred sanctuary dedicated to Lord Kaal Bhairav — featuring Shri Bhairav Chalisa, Kaal Bhairav Ashtakam, and the 108 Sacred Names (Ashtottara Shatanamavali) with pristine typography and meditative clarity.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
