@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Flame, Sparkles, ShieldCheck } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 interface DockItem {
   id: string;
@@ -58,7 +59,7 @@ export default function FloatingDock() {
       aria-label="Sacred Navigation Dock"
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[95vw]"
     >
-      <div className="glass-dock rounded-full p-2 flex items-center gap-1.5 shadow-2xl transition-all duration-300 hover:border-amber-500/30">
+      <div className="glass-dock rounded-full p-1.5 sm:p-2 flex items-center gap-1 sm:gap-1.5 shadow-2xl transition-all duration-300">
         {dockItems.map((item) => {
           const isActive = pathname === item.href;
           const isHovered = hoveredId === item.id;
@@ -67,8 +68,8 @@ export default function FloatingDock() {
             <div key={item.id} className="relative flex items-center justify-center">
               {/* Tooltip */}
               {isHovered && (
-                <div className="absolute -top-14 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-xl bg-zinc-900/95 border border-amber-500/20 text-zinc-100 text-xs shadow-xl backdrop-blur-md whitespace-nowrap pointer-events-none flex flex-col items-center animate-in fade-in zoom-in-95 duration-150 z-50">
-                  <div className="font-medium text-amber-200">{item.name}</div>
+                <div className="absolute -top-14 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-xl bg-zinc-900/95 dark:bg-zinc-900/95 text-zinc-100 text-xs shadow-xl backdrop-blur-md whitespace-nowrap pointer-events-none flex flex-col items-center animate-in fade-in zoom-in-95 duration-150 z-50 border border-amber-500/20">
+                  <div className="font-medium text-amber-300">{item.name}</div>
                   <div className="text-[10px] text-zinc-400 font-devanagari">{item.nameHindi} • {item.badge}</div>
                   <div className="w-2 h-2 bg-zinc-900/95 rotate-45 absolute -bottom-1 border-r border-b border-amber-500/20" />
                 </div>
@@ -80,29 +81,35 @@ export default function FloatingDock() {
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 aria-label={`${item.name} - ${item.nameHindi}`}
-                className={`group relative flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-full transition-all duration-300 ease-out select-none ${
+                className={`group relative flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full transition-all duration-300 ease-out select-none ${
                   isActive
-                    ? "bg-gradient-to-r from-amber-500/20 to-amber-600/10 text-amber-200 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)]"
-                    : "text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] border border-transparent"
+                    ? "bg-amber-500/15 dark:bg-amber-500/20 text-amber-800 dark:text-amber-200 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]"
+                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] border border-transparent"
                 }`}
               >
                 <span className={`transition-transform duration-300 group-hover:scale-110 ${
-                  isActive ? "text-amber-400" : "text-zinc-400 group-hover:text-amber-300"
+                  isActive ? "text-amber-600 dark:text-amber-400" : "text-zinc-500 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-300"
                 }`}>
                   {item.icon}
                 </span>
 
-                <span className="text-xs sm:text-sm font-medium tracking-wide hidden sm:inline-block">
+                <span className="text-xs sm:text-sm font-medium tracking-wide hidden md:inline-block">
                   {item.name}
                 </span>
 
                 {isActive && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_#f59e0b] animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_6px_#f59e0b] animate-pulse" />
                 )}
               </Link>
             </div>
           );
         })}
+
+        {/* Divider */}
+        <div className="h-5 w-[1px] bg-black/10 dark:bg-white/10 mx-0.5" />
+
+        {/* Theme Toggle Button */}
+        <ThemeToggle />
       </div>
     </nav>
   );
