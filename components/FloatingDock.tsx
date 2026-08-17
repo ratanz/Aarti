@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Flame, Sparkles, BookOpen } from "lucide-react";
+import { Home, Flame, Sparkles, ShieldCheck } from "lucide-react";
 
 interface DockItem {
   id: string;
@@ -39,6 +39,14 @@ const dockItems: DockItem[] = [
     badge: "8 Stotras",
     icon: <Sparkles className="w-5 h-5" />,
   },
+  {
+    id: "bhairav-108-names",
+    name: "108 Names",
+    nameHindi: "१०८ नामावली",
+    href: "/bhairav-108-names",
+    badge: "108 Mantras",
+    icon: <ShieldCheck className="w-5 h-5" />,
+  },
 ];
 
 export default function FloatingDock() {
@@ -72,7 +80,7 @@ export default function FloatingDock() {
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 aria-label={`${item.name} - ${item.nameHindi}`}
-                className={`group relative flex items-center gap-2.5 px-4 py-2.5 rounded-full transition-all duration-300 ease-out select-none ${
+                className={`group relative flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-full transition-all duration-300 ease-out select-none ${
                   isActive
                     ? "bg-gradient-to-r from-amber-500/20 to-amber-600/10 text-amber-200 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)]"
                     : "text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] border border-transparent"
@@ -84,7 +92,7 @@ export default function FloatingDock() {
                   {item.icon}
                 </span>
 
-                <span className="text-sm font-medium tracking-wide hidden sm:inline-block">
+                <span className="text-xs sm:text-sm font-medium tracking-wide hidden sm:inline-block">
                   {item.name}
                 </span>
 

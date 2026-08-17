@@ -6,6 +6,7 @@ import { SACRED_TEXTS } from "@/data/texts";
 export default function Home() {
   const chalisa = SACRED_TEXTS["bhairav-chalisa"];
   const ashtakam = SACRED_TEXTS["bhairav-ashtakam"];
+  const names108 = SACRED_TEXTS["bhairav-108-names"];
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden bg-[#050507]">
@@ -21,7 +22,7 @@ export default function Home() {
       </header>
 
       {/* Main Center Content */}
-      <main className="relative z-10 flex flex-col items-center justify-center text-center max-w-3xl mx-auto py-20">
+      <main className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto py-20">
         {/* Subtle Pill Tag */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/[0.04] text-amber-300/90 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-sm shadow-[0_0_20px_rgba(245,158,11,0.05)]">
           <Compass className="w-3.5 h-3.5 text-amber-400" />
@@ -36,13 +37,13 @@ export default function Home() {
           <div className="absolute -inset-x-8 -inset-y-4 bg-amber-500/5 blur-2xl rounded-full pointer-events-none -z-10 group-hover:bg-amber-500/10 transition-colors duration-700" />
         </div>
 
-        {/* Subtitle / Devanagari translation */}
+        {/* Subtitle */}
         <p className="mt-4 text-base sm:text-lg text-zinc-400 font-light max-w-md mx-auto leading-relaxed">
           Sacred verses, chalisas, and stotras for daily meditation, protection, and inner peace.
         </p>
 
         {/* Quick Access Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl mt-12 mb-20 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl mt-12 mb-20 text-left">
           {/* Bhairav Chalisa Quick Card */}
           <Link
             href="/bhairav-chalisa"
@@ -59,7 +60,7 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest text-amber-500/80 font-medium">
                 {chalisa.versesCount}
               </div>
-              <h2 className="text-lg font-semibold text-zinc-100 group-hover:text-amber-200 transition-colors font-cinzel mt-0.5">
+              <h2 className="text-base sm:text-lg font-semibold text-zinc-100 group-hover:text-amber-200 transition-colors font-cinzel mt-0.5">
                 {chalisa.title}
               </h2>
               <p className="text-xs text-zinc-400 font-devanagari mt-1 line-clamp-1">
@@ -84,11 +85,36 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest text-amber-500/80 font-medium">
                 {ashtakam.versesCount}
               </div>
-              <h2 className="text-lg font-semibold text-zinc-100 group-hover:text-amber-200 transition-colors font-cinzel mt-0.5">
+              <h2 className="text-base sm:text-lg font-semibold text-zinc-100 group-hover:text-amber-200 transition-colors font-cinzel mt-0.5">
                 {ashtakam.title}
               </h2>
               <p className="text-xs text-zinc-400 font-devanagari mt-1 line-clamp-1">
                 {ashtakam.titleHindi}
+              </p>
+            </div>
+          </Link>
+
+          {/* 108 Names Quick Card */}
+          <Link
+            href="/bhairav-108-names"
+            className="group relative p-5 rounded-2xl glass-panel glass-panel-hover flex flex-col justify-between overflow-hidden"
+          >
+            <div className="flex items-start justify-between">
+              <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 group-hover:scale-110 group-hover:bg-amber-500/20 transition-all duration-300">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+            </div>
+
+            <div className="mt-6">
+              <div className="text-xs uppercase tracking-widest text-amber-500/80 font-medium">
+                {names108.versesCount}
+              </div>
+              <h2 className="text-base sm:text-lg font-semibold text-zinc-100 group-hover:text-amber-200 transition-colors font-cinzel mt-0.5">
+                108 Sacred Names
+              </h2>
+              <p className="text-xs text-zinc-400 font-devanagari mt-1 line-clamp-1">
+                {names108.titleHindi}
               </p>
             </div>
           </Link>

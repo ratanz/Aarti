@@ -1,20 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { SacredText } from "@/data/texts";
 import FloatingDock from "@/components/FloatingDock";
 import {
   ArrowLeft,
-  BookOpen,
-  Volume2,
-  VolumeX,
-  Type,
   Check,
   Copy,
   Sparkles,
-  Share2,
-  Info,
+  Search,
+  X,
 } from "lucide-react";
 
 interface ReaderViewProps {
@@ -25,6 +21,7 @@ export default function ReaderView({ data }: ReaderViewProps) {
   const [fontSize, setFontSize] = useState<"sm" | "md" | "lg" | "xl">("md");
   const [showTransliteration, setShowTransliteration] = useState(true);
   const [showMeaning, setShowMeaning] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [isCopiedAll, setIsCopiedAll] = useState(false);
 
@@ -35,6 +32,21 @@ export default function ReaderView({ data }: ReaderViewProps) {
     lg: "text-2xl sm:text-3xl leading-loose",
     xl: "text-3xl sm:text-4xl leading-loose",
   };
+
+  const isNamavali = data.category === "Namavali" || data.verses.length > 50;
+
+  // Filter verses if search query exists
+  const filteredVerses = useMemo(() => {
+    if (!searchQuery.trim()) return data.verses;
+    const query = searchQuery.toLowerCase().trim();
+    return data.verses.filter((verse) => {
+      const matchLines = verse.lines.some((l) => l.toLowerCase().includes(query));
+      const matchTrans = verse.transliteration?.some((t) => t.toLowerCase().includes(query));
+      const matchMeaning = verse.meaning?.toLowerCase().includes(query);
+      const matchNumber = verse.number?.toString() === query;
+      return matchLines || matchTrans || matchMeaning || matchNumber;
+    });
+  }, [data.verses, searchQuery]);
 
   const copyVerse = (text: string, index: number) => {
     navigator.clipboard.writeText(text);
@@ -167,75 +179,120 @@ export default function ReaderView({ data }: ReaderViewProps) {
               English Meaning: {showMeaning ? "ON" : "OFF"}
             </button>
           </div>
+
+          {/* Quick Search for 108 Names / Large collections */}
+          {isNamavali && (
+            <div className="mt-6 max-w-md mx-auto relative">
+              <div className="relative flex items-center">
+                <Search className="w-4 h-4 text-zinc-400 absolute left-3.5 pointer-events-none" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search name, meaning or number (e.g. 108, भैरव, fear)..."
+                  className="w-full bg-zinc-900/80 border border-white/10 rounded-full py-2 pl-10 pr-10 text-xs sm:text-sm text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 text-zinc-400 hover:text-zinc-200"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+              {searchQuery && (
+                <div className="text-left text-xs text-zinc-500 mt-2 px-2">
+                  Showing {filteredVerses.length} of {data.verses.length} names
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Verses List */}
-        <div className="mt-10 space-y-8 sm:space-y-10">
-          {data.verses.map((verse, index) => {
-            const verseText = verse.lines.join("\n");
-
-            return (
-              <article
-                key={index}
-                className="group relative p-6 sm:p-8 rounded-2xl glass-panel transition-all duration-300 hover:border-amber-500/20"
+        <div className="mt-10 space-y-6 sm:space-y-8">
+          {filteredVerses.length === 0 ? (
+            <div className="text-center py-16 glass-panel rounded-2xl">
+              <p className="text-zinc-400 text-sm">No names found matching "{searchQuery}".</p>
+              <button
+                onClick={() => setSearchQuery("")}
+                className="mt-3 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium"
               >
-                {/* Verse Header Badge / Type */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs uppercase font-mono tracking-wider text-amber-500/80 font-medium">
-                    {verse.type === "doha"
-                      ? "॥ दोहा ॥"
-                      : verse.type === "phala"
-                      ? "॥ फलश्रुति ॥"
-                      : verse.number
-                      ? `Verse ${verse.number}`
-                      : `Stanza ${index + 1}`}
-                  </span>
+                Clear Search
+              </button>
+            </div>
+          ) : (
+            filteredVerses.map((verse, index) => {
+              const verseText = verse.lines.join("\n");
+              const actualNumber = verse.number || index + 1;
 
-                  <button
-                    onClick={() => copyVerse(verseText, index)}
-                    className="opacity-60 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-white/10 text-zinc-400 hover:text-amber-300 transition-all"
-                    title="Copy this verse"
-                  >
-                    {copiedIndex === index ? (
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    ) : (
-                      <Copy className="w-3.5 h-3.5" />
-                    )}
-                  </button>
-                </div>
+              return (
+                <article
+                  key={index}
+                  className="group relative p-5 sm:p-7 rounded-2xl glass-panel transition-all duration-300 hover:border-amber-500/20"
+                >
+                  {/* Verse Header Badge / Type */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs uppercase font-mono tracking-wider text-amber-500/80 font-medium flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
+                      {verse.type === "doha"
+                        ? "॥ दोहा ॥"
+                        : verse.type === "phala"
+                        ? "॥ फलश्रुति ॥"
+                        : verse.type === "namavali"
+                        ? `Name ${actualNumber}`
+                        : verse.number
+                        ? `Verse ${verse.number}`
+                        : `Stanza ${index + 1}`}
+                    </span>
 
-                {/* Devanagari Verses */}
-                <div className={`font-devanagari text-center font-medium text-zinc-100 tracking-wide ${verseFontSizes[fontSize]} space-y-1`}>
-                  {verse.lines.map((line, lIdx) => (
-                    <p key={lIdx} className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-                      {line}
-                    </p>
-                  ))}
-                </div>
+                    <button
+                      onClick={() => copyVerse(verseText, index)}
+                      className="opacity-60 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-white/10 text-zinc-400 hover:text-amber-300 transition-all"
+                      title="Copy this verse"
+                    >
+                      {copiedIndex === index ? (
+                        <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      ) : (
+                        <Copy className="w-3.5 h-3.5" />
+                      )}
+                    </button>
+                  </div>
 
-                {/* English Transliteration */}
-                {showTransliteration && verse.transliteration && (
-                  <div className="mt-5 pt-4 border-t border-white/[0.06] text-center">
-                    <div className="text-xs sm:text-sm text-amber-200/70 italic font-sans leading-relaxed space-y-0.5">
-                      {verse.transliteration.map((tLine, tIdx) => (
-                        <p key={tIdx}>{tLine}</p>
-                      ))}
+                  {/* Devanagari Verses */}
+                  <div className={`font-devanagari text-center font-medium text-zinc-100 tracking-wide ${verseFontSizes[fontSize]} space-y-1`}>
+                    {verse.lines.map((line, lIdx) => (
+                      <p key={lIdx} className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* English Transliteration */}
+                  {showTransliteration && verse.transliteration && (
+                    <div className="mt-4 pt-3 border-t border-white/[0.06] text-center">
+                      <div className="text-xs sm:text-sm text-amber-200/70 italic font-sans leading-relaxed space-y-0.5">
+                        {verse.transliteration.map((tLine, tIdx) => (
+                          <p key={tIdx}>{tLine}</p>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {/* English Meaning */}
-                {showMeaning && verse.meaning && (
-                  <div className="mt-4 pt-3 border-t border-white/[0.04] text-center">
-                    <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
-                      <span className="text-amber-400/80 font-medium">Meaning: </span>
-                      {verse.meaning}
-                    </p>
-                  </div>
-                )}
-              </article>
-            );
-          })}
+                  {/* English Meaning */}
+                  {showMeaning && verse.meaning && (
+                    <div className="mt-3 pt-2.5 border-t border-white/[0.04] text-center">
+                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
+                        <span className="text-amber-400/80 font-medium">Meaning: </span>
+                        {verse.meaning}
+                      </p>
+                    </div>
+                  )}
+                </article>
+              );
+            })
+          )}
         </div>
 
         {/* Benefits Section */}
