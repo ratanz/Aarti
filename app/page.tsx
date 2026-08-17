@@ -31,8 +31,8 @@ export default function Home() {
 
         {/* Big Center "Aarti" text with crisp contrast in light & dark */}
         <div className="relative group cursor-default">
-          <h1 className="font-cinzel text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-zinc-950 via-zinc-800 to-zinc-600 dark:from-white dark:via-zinc-200 dark:to-zinc-400 select-none drop-shadow-sm dark:drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
-            Aarti
+          <h1 className="font-cinzel text-7xl sm:text-8xl md:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-zinc-950 via-zinc-800 to-zinc-600 dark:from-white dark:via-zinc-200 dark:to-zinc-400 select-none drop-shadow-sm dark:drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+            Shri Bhairav
           </h1>
           <div className="absolute -inset-x-8 -inset-y-4 bg-amber-500/10 dark:bg-amber-500/5 blur-2xl rounded-full pointer-events-none -z-10 group-hover:bg-amber-500/15 dark:group-hover:bg-amber-500/10 transition-colors duration-700" />
         </div>
