@@ -1,6 +1,6 @@
 import Link from "next/link";
 import FloatingDock from "@/components/FloatingDock";
-import { Flame, Sparkles, ArrowUpRight, Compass, ShieldCheck } from "lucide-react";
+import { ScrollText, Sparkles, ArrowUpRight, Compass, Gem } from "lucide-react";
 import { SACRED_TEXTS } from "@/data/texts";
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
           >
             <div className="flex items-start justify-between">
               <div className="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 text-amber-700 dark:text-amber-400 group-hover:scale-110 transition-all duration-300">
-                <Flame className="w-5 h-5" />
+                <ScrollText className="w-5 h-5" />
               </div>
               <ArrowUpRight className="w-4 h-4 text-zinc-400 dark:text-zinc-600 group-hover:text-amber-700 dark:group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
           >
             <div className="flex items-start justify-between">
               <div className="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 text-amber-700 dark:text-amber-400 group-hover:scale-110 transition-all duration-300">
-                <ShieldCheck className="w-5 h-5" />
+                <Gem className="w-5 h-5" />
               </div>
               <ArrowUpRight className="w-4 h-4 text-zinc-400 dark:text-zinc-600 group-hover:text-amber-700 dark:group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
             </div>

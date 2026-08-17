@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Flame, Sparkles, ShieldCheck } from "lucide-react";
+import { Home, ScrollText, Sparkles, Gem } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 interface DockItem {
@@ -29,8 +29,8 @@ const dockItems: DockItem[] = [
     name: "Bhairav Chalisa",
     nameHindi: "श्री भैरव चालीसा",
     href: "/bhairav-chalisa",
-    badge: "40 Verses",
-    icon: <Flame className="w-5 h-5" />,
+    badge: "36 Verses",
+    icon: <ScrollText className="w-5 h-5" />,
   },
   {
     id: "bhairav-ashtakam",
@@ -46,7 +46,7 @@ const dockItems: DockItem[] = [
     nameHindi: "१०८ नामावली",
     href: "/bhairav-108-names",
     badge: "108 Mantras",
-    icon: <ShieldCheck className="w-5 h-5" />,
+    icon: <Gem className="w-5 h-5" />,
   },
 ];
 
