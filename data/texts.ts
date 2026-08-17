@@ -31,250 +31,510 @@ export const SACRED_TEXTS: Record<string, SacredText> = {
     deity: 'Lord Bhairava',
     category: 'Chalisa',
     readingTime: '5-7 mins',
-    versesCount: '40 Verses + Doha',
+    versesCount: '36 Verses + Doha',
     introduction: 'Shri Bhairav Chalisa is a potent devotional hymn dedicated to Lord Bhairava. Chanting this chalisa bestows protection from negative energies, removes fear, dissolves obstacles, and blesses the seeker with courage and peace.',
     benefits: [
-      'Removes fear of unknown and negative energies',
-      'Shields the devotee from obstacles and psychic distress',
-      'Bestows mental clarity, courage, and spiritual strength',
-      'Fosters auspiciousness and divine grace of Lord Shiva'
+      'Removes fear of the unknown, dark energies, and obstacles',
+      'Shields the devotee with divine protection of the Kotwal of Kashi',
+      'Destroys deep karmic afflictions and brings mental peace',
+      'Bestows the boons of Ashta Siddhis, Nava Nidhis, and spiritual strength'
     ],
     verses: [
       {
         type: 'doha',
         lines: [
-          'श्री गणपति गुरु गौरि पद, प्रेम सहित धरि माथ ।',
-          'चालीसा वन्दन करूँ, श्री शिव भैरवनाथ ॥',
-          'श्री भैरव संकट हरन, मंगल करन कृपालु ।',
-          'करहु दया निज दास पे, निसिदिन दीनदयाल ॥'
+          'श्री गणपति गुरु गौरी पद प्रेम सहित धरि माथ ।',
+          'चालीसा वंदन करो श्री शिव भैरवनाथ ॥',
+          'श्री भैरव संकट हरण मंगल करण कृपाल ।',
+          'श्याम वरण विकराल वपु लोचन लाल विशाल ॥'
         ],
         transliteration: [
-          'Shri Ganapati Guru Gauri Pada, Prema Sahita Dhari Matha |',
-          'Chalisa Vandana Karu, Shri Shiva Bhairavanatha ||',
-          'Shri Bhairava Sankata Harana, Mangala Karana Kripalu |',
-          'Karahu Daya Nija Dasa Pe, Nisidina Dinadayala ||'
+          'Shri Ganapati Guru Gauri Pada Prema Sahita Dhari Matha |',
+          'Chalisa Vandana Karo Shri Shiva Bhairavanatha ||',
+          'Shri Bhairava Sankata Harana Mangala Karana Kripala |',
+          'Shyama Varana Vikrala Vapu Lochana Lala Vishala ||'
         ],
-        meaning: 'Bowing with deep devotion at the holy feet of Lord Ganesha, Guru, and Mother Gauri, I offer this Chalisa prayer to Lord Shiva Bhairavnath. O merciful Bhairava, remover of troubles and bestower of auspiciousness, shower your eternal grace upon your devotee.'
+        meaning: 'Bowing with deep devotion at the holy lotus feet of Lord Ganesha, Guru, and Mother Gauri, I offer this Chalisa prayer to Lord Shiva Bhairavnath. Merciful Lord Bhairava dispels all distress and bestows auspicious blessings; dark in complexion with an imposing, awe-inspiring form and large, radiant red eyes.'
       },
       {
         type: 'chaupai',
         number: 1,
         lines: [
-          'जय डमरूधर नयन विशाला ।',
-          'श्याम वर्ण, वपु महा कराला ॥'
+          'जय जय श्री काली के लाला ।',
+          'जयति जयति काशी-कुतवाला ॥'
         ],
         transliteration: [
-          'Jaya Damarudhara Nayana Vishala |',
-          'Shyama Varna, Vapu Maha Karala ||'
+          'Jaya Jaya Shri Kali Ke Lala |',
+          'Jayati Jayati Kashi-Kutawala ||'
         ],
-        meaning: 'Victory to Lord Bhairava who holds the sacred damaru and possesses large, penetrating eyes. Dark in complexion and having an imposing, awe-inspiring form.'
+        meaning: 'Victory, all victory to the beloved son of Mother Kali! Glories and victory to the supreme divine Kotwal (guardian protector) of holy Kashi!'
       },
       {
         type: 'chaupai',
         number: 2,
         lines: [
-          'जय त्रिशूलधर जय डमरूधर ।',
-          'काशी कोतवाल कृपाकर ॥'
+          'जयति बटुक-भैरव भय हारी ।',
+          'जयति काल-भैरव बलकारी ॥'
         ],
         transliteration: [
-          'Jaya Trishuladhara Jaya Damarudhara |',
-          'Kashi Kotawala Kripakara ||'
+          'Jayati Batuka-Bhairava Bhaya Haari |',
+          'Jayati Kala-Bhairava Balakaari ||'
         ],
-        meaning: 'Hail to the bearer of the trident and the sacred damaru, the divine guardian and Kotwal of the holy city of Kashi.'
+        meaning: 'Victory to Batuk Bhairava, the dispeller of all fear! Victory to Kaal Bhairava, endowed with supreme power and strength!'
       },
       {
         type: 'chaupai',
         number: 3,
         lines: [
-          'भाल चन्द्रमा सोहत नीके ।',
-          'कानन कुण्डल मन अति छीके ॥'
+          'जयति नाथ-भैरव विख्याता ।',
+          'जयति सर्व-भैरव सुखदाता ॥'
         ],
         transliteration: [
-          'Bhala Chandrama Sohata Nike |',
-          'Kanana Kundala Mana Ati Chhike ||'
+          'Jayati Natha-Bhairava Vikhyata |',
+          'Jayati Sarva-Bhairava Sukhadatha ||'
         ],
-        meaning: 'The crescent moon adorns your forehead gracefully, and celestial earrings embellish your ears, captivating the minds of all.'
+        meaning: 'Victory to the renowned Lord Nath Bhairava! Victory to the all-pervading Bhairava who bestows peace, happiness, and delight upon all seekers!'
       },
       {
         type: 'chaupai',
         number: 4,
         lines: [
-          'गले मुण्डमाल छबि भारी ।',
-          'करहु कृपा मम काटो संसारी ॥'
+          'भैरव रूप कियो शिव धारण ।',
+          'भव के भार उतारण कारण ॥'
         ],
         transliteration: [
-          'Gale Mundamala Chhabi Bhari |',
-          'Karahu Kripa Mama Kato Samsari ||'
+          'Bhairava Rupa Kiyo Shiva Dharana |',
+          'Bhava Ke Bhara Utarana Karana ||'
         ],
-        meaning: 'A magnificent garland of skulls graces your neck; grant your divine grace and liberate me from worldly attachments and fears.'
+        meaning: 'Lord Shiva assumed the formidable manifestation of Bhairava in order to relieve the worldly creation of its burdens and distress.'
       },
       {
         type: 'chaupai',
         number: 5,
         lines: [
-          'अंग भस्म सोहे अति सुन्दर ।',
-          'कटि किंकिणी रुनझुन बाजे कर ॥'
+          'भैरव रव सुनि हवै भय दूरी ।',
+          'सब विधि होय कामना पूरी ॥'
         ],
         transliteration: [
-          'Anga Bhasma Sohe Ati Sundara |',
-          'Kati Kinkini Runajhuna Baje Kara ||'
+          'Bhairava Rava Suni Havai Bhaya Doori |',
+          'Saba Vidhi Hoya Kamana Poori ||'
         ],
-        meaning: 'Holy sacred ash covers your luminous limbs, and little tinkling bells chime melodiously around your waist.'
+        meaning: 'Upon hearing the resounding roar of Lord Bhairava, all fears are cast far away, and all righteous wishes and prayers are completely fulfilled.'
       },
       {
         type: 'chaupai',
         number: 6,
         lines: [
-          'रक्त नेत्र अति तेज प्रकाशा ।',
-          'मिटे तिमिर होवे उजियासा ॥'
+          'शेष महेश आदि गुण गायो ।',
+          'काशी-कोतवाल कहलायो ॥'
         ],
         transliteration: [
-          'Rakta Netra Ati Teja Prakasha |',
-          'Mite Timira Hove Ujiyasa ||'
+          'Shesha Mahesha Aadi Guna Gaayo |',
+          'Kashi-Kotawala Kahalaayo ||'
         ],
-        meaning: 'Your radiant eyes blaze with brilliant divine luster, eradicating the darkness of ignorance and filling the heart with light.'
+        meaning: 'Even Sheshanaga and Lord Shiva sing your sublime attributes; you are revered throughout the universe as the Kotwal (chief guardian) of Kashi.'
       },
       {
         type: 'chaupai',
         number: 7,
         lines: [
-          'सवारी श्वान आपकी प्यारी ।',
-          'भक्तन के रक्षक हितकारी ॥'
+          'जटा जूट शिर चंद्र विराजत ।',
+          'बाला मुकुट बिजायठ साजत ॥'
         ],
         transliteration: [
-          'Sawari Shwana Apaki Pyari |',
-          'Bhaktana Ke Rakshaka Hitakari ||'
+          'Jata Juta Shira Chandra Virajata |',
+          'Bala Mukuta Bijayatha Saajata ||'
         ],
-        meaning: 'The loyal dog is your beloved vehicle; you are the supreme protector and benevolent well-wisher of all your devotees.'
+        meaning: 'The crescent moon adorns your matted tresses; a radiant crown and celestial armlets (bijayath) gracefully embellish your divine form.'
       },
       {
         type: 'chaupai',
         number: 8,
         lines: [
-          'भूत पिशाच निकट नहिं आवे ।',
-          'भैरव नाम जब सब गावे ॥'
+          'कटि करधनी घुंघरू बाजत ।',
+          'दर्शन करत सकल भय भाजत ॥'
         ],
         transliteration: [
-          'Bhuta Pishacha Nikata Nahin Aave |',
-          'Bhairava Nama Jaba Saba Gaave ||'
+          'Kati Karadhani Ghungharu Baajata |',
+          'Darshana Karata Sakala Bhaya Bhaajata ||'
         ],
-        meaning: 'Spirits and negative entities dare not approach the one who chants the auspicious name of Lord Bhairava.'
+        meaning: 'Melodious bells tinkle on your waist-girdle, and having your sacred darshana causes all terrors and anxieties to vanish immediately.'
       },
       {
         type: 'chaupai',
         number: 9,
         lines: [
-          'रोग दोष सब दूर भगावे ।',
-          'सुख सम्पति नित घर में लावे ॥'
+          'जीवन दान दास को दीन्ह्यो ।',
+          'कीन्ह्यो कृपा नाथ तब चीन्ह्यो ॥'
         ],
         transliteration: [
-          'Roga Dosha Saba Dura Bhagaave |',
-          'Sukha Sampati Nita Ghara Men Laave ||'
+          'Jeevana Daana Dasa Ko Deenhyo |',
+          'Keenhyo Kripa Natha Taba Cheenhyo ||'
         ],
-        meaning: 'All illnesses and afflictions flee away, bringing prosperity, peace, and eternal joy into the home.'
+        meaning: 'You bestowed the priceless gift of life upon your devoted servant; bestowing your divine mercy, you made your true presence known.'
       },
       {
         type: 'chaupai',
         number: 10,
         lines: [
-          'बटुक भैरव आप कहलाओ ।',
-          'भक्तन के संकट मिटाओ ॥'
+          'वसि रसना बनि सारद-काली ।',
+          'दीन्ह्यो वर राख्यो मम लाली ॥'
         ],
         transliteration: [
-          'Batuka Bhairava Apa Kahalao |',
-          'Bhaktana Ke Sankata Mitao ||'
+          'Vasi Rasana Bani Sharada-Kali |',
+          'Deenhyo Vara Raakhyo Mama Laali ||'
         ],
-        meaning: 'You are lovingly invoked as Batuka Bhairava, who tenderly dispels the tribulations of every seeking devotee.'
+        meaning: 'Residing upon the devotee\'s speech as goddess Saraswati and Kali, you granted divine boons and safeguarded their honor and devotion.'
       },
       {
         type: 'chaupai',
         number: 11,
         lines: [
-          'काल भैरव अति बलवाना ।',
-          'यमराजहु प्रभु का डर माना ॥'
+          'धन्य धन्य भैरव भय भंजन ।',
+          'जय मनरंजन खल दल भंजन ॥'
         ],
         transliteration: [
-          'Kala Bhairava Ati Balawana |',
-          'Yamarajahu Prabhu Ka Dara Maana ||'
+          'Dhanya Dhanya Bhairava Bhaya Bhanjana |',
+          'Jaya Manoranjana Khala Dala Bhanjana ||'
         ],
-        meaning: 'As Kaal Bhairava, your might is limitless; even the lord of death bows in reverent awe before your authority.'
+        meaning: 'Blessed, forever blessed is Lord Bhairava, the dispeller of fear! Hail the bringer of supreme inner joy and destroyer of demonic hordes!'
       },
       {
         type: 'chaupai',
         number: 12,
         lines: [
-          'अष्ट भैरव के रूप प्रकाशा ।',
-          'पूरण करहु भक्त अभिलाषा ॥'
+          'कर त्रिशूल डमरू शुचि कोड़ा ।',
+          'कृपा कटाक्ष सुयश नहिं थोडा ॥'
         ],
         transliteration: [
-          'Ashta Bhairava Ke Rupa Prakasha |',
-          'Purana Karahu Bhakta Abhilasha ||'
+          'Kara Trishula Damaru Shuchi Koda |',
+          'Kripa Kataksha Suyasha Nahin Thoda ||'
         ],
-        meaning: 'You manifest across the eight divine forms (Ashta Bhairavas), fulfilling the pure desires and spiritual aspirations of your seekers.'
+        meaning: 'Holding the sacred trident, damaru, and holy whip in your hands, the glory of your merciful and compassionate glance is boundless.'
       },
       {
         type: 'chaupai',
         number: 13,
         lines: [
-          'जो जन ध्यान धरै मन लाई ।',
-          'ताकर भव बाधा मिटि जाई ॥'
+          'जो भैरव निर्भय गुण गावत ।',
+          'अष्टसिद्धि नव निधि फल पावत ॥'
         ],
         transliteration: [
-          'Jo Jana Dhyana Dharai Mana Laai |',
-          'Takara Bhava Badha Miti Jaai ||'
+          'Jo Bhairava Nirbhaya Guna Gaavata |',
+          'Ashtasiddhi Nava Nidhi Phala Paavata ||'
         ],
-        meaning: 'Whoever meditates on you with sincere devotion finds all their worldly obstructions dissolved.'
+        meaning: 'Whoever sings the glories of Lord Bhairava with a fearless heart attains the fruits of the eight mystic perfections (Siddhis) and nine divine treasures (Nidhis).'
       },
       {
         type: 'chaupai',
         number: 14,
         lines: [
-          'रवि-शशि तेज समाहित तोहीं ।',
-          'ज्ञान-भक्ति दीजै प्रभु मोहीं ॥'
+          'रूप विशाल कठिन दुख मोचन ।',
+          'क्रोध कराल लाल दुहुं लोचन ॥'
         ],
         transliteration: [
-          'Ravi-Shashi Teja Samahita Tohi |',
-          'Gyana-Bhakti Dijai Prabhu Mohi ||'
+          'Rupa Vishala Kathina Dukha Mochana |',
+          'Krodha Karala Lala Duhun Lochana ||'
         ],
-        meaning: 'The brilliance of the sun and moon rests within you; bless me, O Lord, with true wisdom and devotion.'
+        meaning: 'Your colossal form liberates seekers from the most difficult sorrows; both your eyes blaze with righteous red fury against evil and injustice.'
       },
       {
         type: 'chaupai',
         number: 15,
         lines: [
-          'शत्रु दमन तुम कीन्हे भारी ।',
-          'सदा विजय होवे तुम्हारी ॥'
+          'अगणित भूत प्रेत संग डोलत ।',
+          'बम बम बम शिव बम बम बोलत ॥'
         ],
         transliteration: [
-          'Shatru Damana Tuma Kinhe Bhari |',
-          'Sada Vijaya Hove Tumhari ||'
+          'Aganita Bhuta Preta Sanga Dolata |',
+          'Bama Bama Bama Shiva Bama Bama Bolata ||'
         ],
-        meaning: 'You vanquish inner enemies like greed, anger, and ego; victory forever belongs to you.'
+        meaning: 'Surrounded by legions of celestial attendants and spirits, you wander ecstatically proclaiming the holy chant: "Bam Bam Bam Shiva Bam Bam!"'
       },
       {
         type: 'chaupai',
         number: 16,
         lines: [
-          'जो नर पाठ करे चालीस ।',
-          'तापर कृपा करें जगदीश ॥'
+          'रुद्रकाय काली के लाला ।',
+          'महा कालहू के हो काला ॥'
         ],
         transliteration: [
-          'Jo Nara Patha Kare Chalisa |',
-          'Tapara Kripa Kare Jagadisha ||'
+          'Rudrakaya Kali Ke Lala |',
+          'Maha Kaalahu Ke Ho Kaala ||'
         ],
-        meaning: 'Whosoever regularly recites this forty-verse prayer is showered with the supreme grace of the Lord.'
+        meaning: 'Embodiment of Rudra and beloved child of Mother Kali, you are the ultimate master of Time and the destroyer of death itself.'
+      },
+      {
+        type: 'chaupai',
+        number: 17,
+        lines: [
+          'बटुक नाथ हो काल गंभीरा ।',
+          'श्वेत रक्त अरु श्याम शरीरा ॥'
+        ],
+        transliteration: [
+          'Batuka Natha Ho Kaala Gambheera |',
+          'Shweta Rakta Aru Shyama Shareera ||'
+        ],
+        meaning: 'You are the gentle Batuk Nath as well as the solemn Kaal Bhairava, appearing in luminous white, crimson red, and dark mystic bodily complexions.'
+      },
+      {
+        type: 'chaupai',
+        number: 18,
+        lines: [
+          'करत नीनहूं रूप प्रकाशा ।',
+          'भरत सुभक्तन कहं शुभ आशा ॥'
+        ],
+        transliteration: [
+          'Karata Neenahun Rupa Prakasha |',
+          'Bharata Subhaktana Kahan Shubha Aasha ||'
+        ],
+        meaning: 'Radiating brilliance through all three cosmic aspects, you fill your sincere devotees with auspicious hope, courage, and divine blessings.'
+      },
+      {
+        type: 'chaupai',
+        number: 19,
+        lines: [
+          'रत्न जड़ित कंचन सिंहासन ।',
+          'व्याघ्र चर्म शुचि नर्म सुआनन ॥'
+        ],
+        transliteration: [
+          'Ratna Jadita Kanchana Simhasana |',
+          'Vyaghra Charma Shuchi Narma Su-Aanana ||'
+        ],
+        meaning: 'Enthroned upon a golden throne studded with precious gems, seated upon pure tiger skin with a serene and gracious countenance.'
+      },
+      {
+        type: 'chaupai',
+        number: 20,
+        lines: [
+          'तुमहि जाइ काशिहिं जन ध्यावहिं ।',
+          'विश्वनाथ कहं दर्शन पावहिं ॥'
+        ],
+        transliteration: [
+          'Tumahi Jaai Kashihi Jana Dhyavahin |',
+          'Vishwanatha Kahan Darshana Paavahin ||'
+        ],
+        meaning: 'Devotees who visit holy Kashi first meditate upon you, and only through your grace do they receive the divine vision of Lord Vishwanath.'
+      },
+      {
+        type: 'chaupai',
+        number: 21,
+        lines: [
+          'जय प्रभु संहारक सुनन्द जय ।',
+          'जय उन्नत हर उमा नन्द जय ॥'
+        ],
+        transliteration: [
+          'Jaya Prabhu Samharaka Sunanda Jaya |',
+          'Jaya Unnata Hara Uma Nanda Jaya ||'
+        ],
+        meaning: 'Glory to the Lord, the auspicious dissolver of illusion! Victory to the exalted Shiva who brings joy to Mother Uma!'
+      },
+      {
+        type: 'chaupai',
+        number: 22,
+        lines: [
+          'भीम त्रिलोचन स्वान साथ जय ।',
+          'वैजनाथ श्री जगतनाथ जय ॥'
+        ],
+        transliteration: [
+          'Bheema Trilochana Swaana Saatha Jaya |',
+          'Vaijanatha Shri Jagatanatha Jaya ||'
+        ],
+        meaning: 'Victory to the three-eyed formidable Lord accompanied by His divine canine vahana! Hail Baijnath, the Lord of all the worlds!'
+      },
+      {
+        type: 'chaupai',
+        number: 23,
+        lines: [
+          'महा भीम भीषण शरीर जय ।',
+          'रुद्र त्रयम्बक धीर वीर जय ॥'
+        ],
+        transliteration: [
+          'Maha Bheema Bheeshana Shareera Jaya |',
+          'Rudra Trayambaka Dheera Veera Jaya ||'
+        ],
+        meaning: 'Hail the supreme Lord of tremendous, awe-inspiring presence! Victory to Rudra, the three-eyed, courageous, and steadfast guardian!'
+      },
+      {
+        type: 'chaupai',
+        number: 24,
+        lines: [
+          'अश्वनाथ जय प्रेतनाथ जय ।',
+          'स्वानारुढ़ सयचंद्र नाथ जय ॥'
+        ],
+        transliteration: [
+          'Ashwanatha Jaya Pretanatha Jaya |',
+          'Swanarudha Sayachandra Natha Jaya ||'
+        ],
+        meaning: 'Victory to Ashwanath and Pretanath! Hail the Lord mounted upon the dog vehicle, adorned with the radiant crescent moon!'
+      },
+      {
+        type: 'chaupai',
+        number: 25,
+        lines: [
+          'निमिष दिगंबर चक्रनाथ जय ।',
+          'गहत अनाथन नाथ हाथ जय ॥'
+        ],
+        transliteration: [
+          'Nimisha Digambara Chakranatha Jaya |',
+          'Gahata Anaathana Natha Haatha Jaya ||'
+        ],
+        meaning: 'Victory to the space-clad Lord of the cosmic wheel! Hail the protector who reaches out his benevolent hands to embrace the helpless!'
+      },
+      {
+        type: 'chaupai',
+        number: 26,
+        lines: [
+          'त्रेशलेश भूतेश चंद्र जय ।',
+          'क्रोध वत्स अमरेश नन्द जय ॥'
+        ],
+        transliteration: [
+          'Treshelesha Bhutesha Chandra Jaya |',
+          'Krodha Vatsa Amaresha Nanda Jaya ||'
+        ],
+        meaning: 'Hail the sovereign of elemental spirits crowned with the moon! Victory to the fearless master who destroys wickedness with righteous wrath!'
+      },
+      {
+        type: 'chaupai',
+        number: 27,
+        lines: [
+          'श्री वामन नकुलेश चण्ड जय ।',
+          'कृत्याऊ कीरति प्रचण्ड जय ॥'
+        ],
+        transliteration: [
+          'Shri Vamana Nakulesha Chanda Jaya |',
+          'Kriyata-u Keerati Prachanda Jaya ||'
+        ],
+        meaning: 'Victory to Vamana, Nakulesha, and Chanda Bhairava! Hail your mighty power that shatters all adverse forces and negative sorcery!'
+      },
+      {
+        type: 'chaupai',
+        number: 28,
+        lines: [
+          'रुद्र बटुक क्रोधेश कालधर ।',
+          'चक्र तुण्ड दश पाणिव्याल धर ॥'
+        ],
+        transliteration: [
+          'Rudra Batuka Krodhesha Kaaladhara |',
+          'Chakra Tunda Dasha Paani-Vyala Dhara ||'
+        ],
+        meaning: 'You are Rudra, Batuk, Krodhesh, and Kaaladhar; wielding the cosmic discus and adorned with ten arms holding divine serpents!'
+      },
+      {
+        type: 'chaupai',
+        number: 29,
+        lines: [
+          'करि मद पान शम्भु गुणगावत ।',
+          'चौंसठ योगिन संग नचावत ॥'
+        ],
+        transliteration: [
+          'Kari Mada Paana Shambhu Guna-Gaavata |',
+          'Chaunsatha Yogina Sanga Nachaavata ||'
+        ],
+        meaning: 'Drinking divine spiritual nectar, you sing the praise of Lord Shiva and dance in cosmic rhythm alongside the sixty-four Yoginis!'
+      },
+      {
+        type: 'chaupai',
+        number: 30,
+        lines: [
+          'करत कृपा जन पर बहु ढंगा ।',
+          'काशी कोतवाल अड़बंगा ॥'
+        ],
+        transliteration: [
+          'Karata Kripa Jana Para Bahu Dhanga |',
+          'Kashi Kotawala Adabanga ||'
+        ],
+        meaning: 'You bestow grace upon your devotees in myriad wondrous ways, O fearless, majestic Kotwal of Kashi!'
+      },
+      {
+        type: 'chaupai',
+        number: 31,
+        lines: [
+          'देयं काल भैरव जब सोटा ।',
+          'नसै पाप मोटा से मोटा ॥'
+        ],
+        transliteration: [
+          'Deyan Kaala Bhairava Jaba Sota |',
+          'Nasai Paapa Mota Se Mota ||'
+        ],
+        meaning: 'When Kaal Bhairava strikes with his protective staff (sota), even the heaviest and most obstinate sins and obstacles are completely destroyed.'
+      },
+      {
+        type: 'chaupai',
+        number: 32,
+        lines: [
+          'जनकर निर्मल होय शरीरा ।',
+          'मिटै सकल संकट भव पीरा ॥'
+        ],
+        transliteration: [
+          'Janakara Nirmala Hoya Shareera |',
+          'Mitai Sakala Sankata Bhava Peera ||'
+        ],
+        meaning: 'The devotee\'s body and mind become pure and pristine, and every crisis, distress, and worldly pain is completely erased.'
+      },
+      {
+        type: 'chaupai',
+        number: 33,
+        lines: [
+          'श्री भैरव भूतों के राजा ।',
+          'बाधा हरत करत शुभ काजा ॥'
+        ],
+        transliteration: [
+          'Shri Bhairava Bhootana Ke Raaja |',
+          'Baadha Harata Karata Shubha Kaaja ||'
+        ],
+        meaning: 'Lord Bhairava is the supreme king of all spirits and elemental forces; he removes every impediment and blesses every endeavor with success.'
+      },
+      {
+        type: 'chaupai',
+        number: 34,
+        lines: [
+          'ऐलादी के दुख निवारयो ।',
+          'सदा कृपाकरि काज सम्हारयो ॥'
+        ],
+        transliteration: [
+          'Ailadi Ke Dukha Nivaarayo |',
+          'Sada Kripakari Kaaja Samhaarayo ||'
+        ],
+        meaning: 'You eradicated the sorrows and afflictions of your devoted souls, always watching over and fulfilling their work with grace.'
+      },
+      {
+        type: 'chaupai',
+        number: 35,
+        lines: [
+          'सुन्दर दास सहित अनुरागा ।',
+          'श्री दुर्वासा निकट प्रयागा ॥'
+        ],
+        transliteration: [
+          'Sundara Dasa Sahita Anuraaga |',
+          'Shri Durvasa Nikata Prayaga ||'
+        ],
+        meaning: 'Sage Sundardas, filled with immense love and devotion, composed this sacred hymn near the hermitage of sage Durvasa at Prayag.'
+      },
+      {
+        type: 'chaupai',
+        number: 36,
+        lines: [
+          'श्री भैरव जी की जय लेख्यो ।',
+          'सकल कामना पूरण देख्यो ॥'
+        ],
+        transliteration: [
+          'Shri Bhairava Ji Ki Jaya Lekhyo |',
+          'Sakala Kamana Poorana Dekhyo ||'
+        ],
+        meaning: 'He recorded the glorious victory of Lord Bhairava, witnessing all wishes, aspirations, and prayers fulfilled through his divine grace.'
       },
       {
         type: 'doha',
         lines: [
-          'जय जय जय भैरव प्रभु, संकट हरहु हमार ।',
-          'कृपा दृष्टि राखहु सदा, पार करो संसार ॥'
+          'जय जय जय भैरव बटुक स्वामी संकट टार ।',
+          'कृपा दास पर कीजिए शंकर के अवतार ॥'
         ],
         transliteration: [
-          'Jaya Jaya Jaya Bhairava Prabhu, Sankata Harahu Hamara |',
-          'Kripa Drishti Rakhahu Sada, Para Karo Samsara ||'
+          'Jaya Jaya Jaya Bhairava Batuka Swami Sankata Taara |',
+          'Kripa Dasa Para Keejiye Shankara Ke Avataara ||'
         ],
-        meaning: 'Victory, victory, victory to Lord Bhairava! Relieve all our distresses, gaze upon us with your merciful eyes, and guide us across the ocean of worldly existence.'
+        meaning: 'Victory, victory, all victory to Lord Batuk Bhairava! Dispeller of all hardships and tribulations, please shower your divine mercy upon your devotee, O holy incarnation of Lord Shiva!'
       }
     ]
   },
