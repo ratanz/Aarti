@@ -76,7 +76,7 @@ export default function ReaderView({ data }: ReaderViewProps) {
             className="flex items-center gap-2 text-zinc-700 dark:text-zinc-400 hover:text-amber-700 dark:hover:text-amber-300 transition-colors text-sm font-semibold group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span className="font-cinzel tracking-wider">Aarti</span>
+            <span className="font-cinzel tracking-wider">Homepage</span>
           </Link>
 
           {/* Quick Reader Controls */}
